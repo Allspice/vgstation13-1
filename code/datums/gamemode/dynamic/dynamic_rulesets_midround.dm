@@ -503,6 +503,45 @@
 	new_frank.setGender(gender)
 	return new_frank
 
+
+
+
+//////////////////////////////////////////////
+//                                          //
+//         TIME COP (MIDROUND)         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                          //
+//////////////////////////////////////////////
+
+/datum/dynamic_ruleset/midround/from_ghosts/time_cop
+	name = "Time Cop Attack"
+	role_category = /datum/role/time_cop
+	enemy_jobs = list("Security Officer","Detective", "Warden", "Head of Security", "Captain")
+	required_pop = list(15,15,15,15,15,10,10,10,5,5)
+	required_candidates = 1
+	weight = 10
+	cost = 20
+	requirements = list(90,90,60,20,10,10,10,10,10,10)
+	high_population_requirement = 20
+	logo = "timecop-logo"
+	repeatable = TRUE
+
+/datum/dynamic_ruleset/midround/from_ghosts/time_cop/acceptable(var/population=0,var/threat=0)
+	var/player_count = mode.living_players.len
+	var/antag_count = mode.living_antags.len
+	var/max_traitors = round(player_count / 10) + 1
+	if ((antag_count < max_traitors) && prob(mode.threat_level))
+		return ..()
+	else
+		return 0
+
+/datum/dynamic_ruleset/midround/from_ghosts/time_cop/setup_role(var/datum/role/newtimecop)
+	var/datum/faction/time_police/cops = find_active_faction_by_type(/datum/faction/time_police)
+	if (!cops)
+		cops = ticker.mode.CreateFaction(/datum/faction/time_police, null, 1)
+	cops.HandleRecruitedRole(newtimecop)
+
+	return ..()
+
 //////////////////////////////////////////////
 //                                          //
 //               THE GRINCH (holidays)      ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

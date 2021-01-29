@@ -909,6 +909,14 @@
 	for(var/i = 1 to 7)
 		new /obj/item/toy/balloon(src)
 
+/obj/item/weapon/storage/box/chrono_grenades/carbon
+	icon_state = "chrono_grenade"
+
+/obj/item/weapon/storage/box/chrono_grenades/carbon/New()
+	..()
+	for(var/i = 1 to 7)
+		new /obj/item/weapon/grenade/chronogrenade/carbon(src)
+
 /obj/item/weapon/storage/box/chrono_grenades/future
 	icon_state = "future_grenade"
 

@@ -19,6 +19,7 @@
 #define CLOCKWORK "clockwork"
 #define PLAGUEMICE "plague mice invasion"
 #define SPIDERCLAN "spider clan"
+#define TIMEPOLICE "time police"
 #define XENOMORPH_HIVE "alien hivemind"
 //-------
 #define HIVEMIND "changeling hivemind"
@@ -45,6 +46,7 @@
 #define WIZAPP "wizard's apprentice"
 #define MADMONKEY "monkey fever infected"
 #define NINJA "Space Ninja"
+#define TIMECOP "Time Cop"
 #define WISHGRANTERAVATAR "avatar of the Wish Granter"
 #define HIGHLANDER "highlander"
 #define DEATHSQUADIE "death commando"

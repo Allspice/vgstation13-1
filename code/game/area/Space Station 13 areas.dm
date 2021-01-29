@@ -179,6 +179,15 @@ proc/process_adminbus_teleport_locs()
 	shuttle_can_crush = FALSE
 	flags = NO_PERSISTENCE
 
+/area/academy
+	name = "\improper Time Police Academy"
+	icon_state = "academy"
+	requires_power = 0
+	dynamic_lighting = 0
+	shuttle_can_crush = FALSE
+	flags = NO_PERSISTENCE
+
+
 //These are shuttle areas, they must contain two areas in a subgroup if you want to move a shuttle from one
 //place to another. Look at escape shuttle for example.
 //All shuttles show now be under shuttle since we have smooth-wall code.

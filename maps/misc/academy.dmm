@@ -1,0 +1,24 @@
+"a" = (/turf/simulated/shuttle/wall{icon_state = "wall3"},/area/academy)
+"b" = (/obj/structure/button/time_cop/teleporter,/turf/simulated/shuttle/wall{icon_state = "wall3"},/area/academy)
+"c" = (/obj/structure/button/time_cop/launcher,/turf/simulated/shuttle/wall{icon_state = "wall3"},/area/academy)
+"d" = (/turf/simulated/floor/engine/acoustic,/area/academy)
+"e" = (/obj/effect/decal/timecopporter,/turf/simulated/floor/engine/acoustic,/area/academy)
+"f" = (/obj/effect/landmark{name = "timecopstart"},/turf/simulated/floor/engine/acoustic,/area/academy)
+
+(1,1,1) = {"
+aaaabaaaaacaaaa
+adddedddddeddda
+addddddddddddda
+addddddddddddda
+addddddddddddda
+addddddddddddda
+addddddddddddda
+addddddfdddddda
+addddddddddddda
+addddddddddddda
+addddddddddddda
+addddddddddddda
+addddddddddddda
+addddddddddddda
+aaaaaaaaaaaaaaa
+"}

@@ -141,6 +141,43 @@
 	return 1
 
 
+//////////////////////////////////////////////
+//                                          //
+//               TIME COP                ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                          //
+//////////////////////////////////////////////
+
+
+/datum/dynamic_ruleset/latejoin/time_cop
+	name = "Time Cop Attack"
+	role_category = /datum/role/time_cop
+	enemy_jobs = list("Security Officer","Detective", "Warden", "Head of Security", "Captain")
+	required_pop = list(15,15,10,10,10,10,10,0,0,0)
+	required_candidates = 1
+	weight = 10
+	cost = 20
+	requirements = list(90,90,60,20,10,10,10,10,10,10)
+	high_population_requirement = 20
+	logo = "timecop-logo"
+
+	repeatable = TRUE
+
+/datum/dynamic_ruleset/latejoin/time_cop/execute()
+	var/mob/M = pick(candidates)
+	if(!latejoinprompt(M,src))
+		message_admins("[M.key] has opted out of becoming a time cop.")
+		return 0
+	assigned += M
+	candidates -= M
+	var/datum/role/time_cop/newtimecop = new
+	newtimecop.AssignToRole(M.mind,1)
+	var/datum/faction/time_police/cops = find_active_faction_by_type(/datum/faction/time_police)
+	if (!cops)
+		cops = ticker.mode.CreateFaction(/datum/faction/time_police, null, 1)
+	cops.HandleRecruitedRole(newtimecop)
+	newtimecop.Greet(GREET_DEFAULT)
+	return 1
+
 
 //////////////////////////////////////////////
 //                                          //

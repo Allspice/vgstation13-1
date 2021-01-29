@@ -24,6 +24,7 @@ var/global/list/special_roles = list(
 	ROLE_STRIKE	  	= 1,
 	GRINCH			= 1,
 	NINJA			= 1,
+	TIMECOP			= 1,
 	ROLE_MINOR		= 1,
 	ROLE_PRISONER   = 1,
 )
@@ -44,6 +45,7 @@ var/global/list/special_roles = list(
 	ROLE_STRIKE	  	= 1,
 	GRINCH			= 1,
 	NINJA			= 1,
+	TIMECOP			= 1,
 	ROLE_MINOR		= 1,
 	ROLE_PRISONER	= 1,
 )
@@ -74,6 +76,7 @@ var/list/role_wiki=list(
 	WIZARD					= "Wizard",
 	GRINCH					= "Grinch",
 	NINJA					= "Space_Ninja",
+	TIMECOP					= "Time_Cop",
 	ROLE_MINOR				= "Minor_Roles",
 	ROLE_PRISONER			= "Minor_Roles",
 )
